@@ -2,7 +2,7 @@
 //@import 'partials/jquery-ui';
 @import "partials/owl-carousel";
 
-.topo-pagina {
+.container-geral .topo-pagina {
     position: relative;
 
     img {
@@ -35,6 +35,7 @@
         margin-top: 15px;
         padding-right: 110px;
         line-height: 18px;
+        color: #fff;
     }
 
     a.quero-ganhar {
@@ -52,8 +53,16 @@
         transition: all 0.3s;
 
         &:hover {
-            background: none;
+            background: #ce8800;
         }
+    }
+}
+
+.container-geral {
+    p {
+        font-size: em(13);
+        line-height: 18px;
+        color: #000;
     }
 }
 
@@ -81,24 +90,21 @@
     }
 
     p {
-        font-size: em(13);
-        line-height: 18px;
-        color: #000;
         margin-top: 10px;
         padding: 0 60px;
     }
 }
 
+h2.titulo-padrao {
+    font-size: em(36);
+    line-height: 49px;
+    color: $cor-base;
+    font-weight: bold;
+    text-align: center;
+}
+
 .passos {
     margin-top: 110px;
-
-    h2 {
-        font-size: em(36);
-        line-height: 49px;
-        color: $cor-base;
-        font-weight: bold;
-        text-align: center;
-    }
 
     .item-passo {
         max-width: 710px;
@@ -118,9 +124,6 @@
             font-weight: bold;
         }
         p {
-            font-size: em(13);
-            line-height: 18px;
-            color: #000;
             margin-top: 5px;
         }
     }
@@ -131,5 +134,111 @@
 
     img {
         width: 100%;
+    }
+}
+
+.afiliado {
+    margin-top: 130px;
+    padding: 0 80px;
+
+    .detalhes-afiliado {
+        margin-top: 40px;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .afliado-item {
+        justify-content: flex-end;
+        width: 420px;
+        margin-bottom: 45px;
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+
+            .desc-afliado {
+                margin: 0 0 0 30px;
+
+                p {
+                    text-align: left;
+                }
+            }
+        }
+
+        .divulgacao {
+            padding-left: 10px;
+        }
+
+        .plataforma {
+            padding-right: 30px;
+        }
+
+        .desc-afliado {
+            margin-right: 30px;
+
+            p {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.cases-de-sucesso {
+    margin-top: 84px;
+    text-align: center;
+
+    p {
+        margin-top: 8px;
+    }
+
+    .lista-cases {
+        margin-top: 50px;
+    }
+
+    .case-item {
+        padding: 0 25px;
+
+        .conteudo-case {
+            border-radius: 10px;
+            @include box-shadow(0px 4px 15px rgba(0, 51, 39, 0.17));
+        }
+
+        figure {
+            height: 145px;
+            overflow: hidden;
+
+            img {
+                border-radius: 10px 10px 0 0;
+            }
+        }
+
+        .nome-case {
+            height: 45px;
+            background: #d0d7df;
+            border-radius: 0 0 10px 10px;
+            font-style: italic;
+            font-weight: 500;
+            font-size: em(14);
+            line-height: 45px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .lucro-case {
+            .porcentagem {
+                font-weight: bold;
+                font-size: em(36);
+                color: #0099ff;
+            }
+
+            .descricao-lucro {
+                width: 113px;
+                margin-left: 12px;
+                text-align: left;
+                margin-top: 0;
+            }
+        }
     }
 }
