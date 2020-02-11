@@ -1,1 +1,37 @@
-@import 'partials/base';
+@import "partials/base";
+
+header {
+    padding: 22px 0;
+
+    .logo {
+        width: 153px;
+    }
+
+    ul#nav-root {
+        > li {
+            padding: 0 25px;
+
+            &:hover > a {
+                color: $cor-base;
+            }
+
+            &.destaque > a {
+                padding: 15px 22px;
+                border: 1px solid $cor-base;
+                border-radius: 10px;
+                font-weight: bold;
+
+                &:hover {
+                    background: $cor-base;
+                    color: #fff;
+                }
+            }
+
+            > a {
+                font-size: em(14);
+                color: #000;
+                @include transition(color 0.2s);
+            }
+        }
+    }
+}

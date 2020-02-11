@@ -32,13 +32,13 @@
     }
 
     .owl-wrapper,
-    .owl-item{
+    .owl-item {
         -webkit-backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         -ms-backface-visibility: hidden;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
     }
 
     .owl-item {
@@ -76,7 +76,7 @@
         background: none;
         color: inherit;
         border: none;
-        padding:0!important;
+        padding: 0 !important;
         font: inherit;
     }
 
