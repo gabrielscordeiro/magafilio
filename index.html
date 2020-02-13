@@ -25,13 +25,13 @@
     <meta name="title" content="">
     <meta name="keywords" content="afiliados, ganhe dinheiro" />
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="web-magafilio/css/main.css" />
     <link rel="stylesheet" type="text/css" href="web-magafilio/css/home.css" />
 
     <script type="text/javascript" src="web-magafilio/js/jquery-3.4.0.min.js"></script>
-    <script type="text/javascript" src="web-magafilio/js/magapay.js"></script>
+    <script type="text/javascript" src="web-magafilio/js/magafilio.js"></script>
     <meta name="author" content="Gabriel Schmidt Cordeiro">
 </head>
 
@@ -40,7 +40,7 @@
         <div class="container flex center space-between">
             <h1 title="Magafilio" class="logo">
                 <a href="/">
-                    <img src="web-magafilio/image/header/logo.svg" alt="Magafilio" title="Magafilio"
+                    <img src="web-magafilio/image/logo.svg" alt="Magafilio" title="Magafilio"
                         draggable="false" />
                 </a>
             </h1>
@@ -73,6 +73,20 @@
                 </li>
             </ul>
         </div>
+
+        <script type="text/javascript">
+            $(function () {
+                'use strict';
+
+                $(window).on('scroll', function () {
+                    if ($(this).scrollTop() > 0) {
+                        $('header').addClass('fixed');
+                    } else {
+                        $('header').removeClass('fixed');
+                    }
+                });
+            });
+        </script>
     </header>
 
     <div class="container-geral">
@@ -89,7 +103,7 @@
                             Divulgue produtos online e transforme uma atividade em um negócio lucrativo através de nossa
                             plataforma.
                         </p>
-                        <a href="" class="quero-ganhar">
+                        <a href="" class="button button-base quero-ganhar">
                             Quero ganhar dinheiro
                         </a>
                     </div>
@@ -120,7 +134,7 @@
             </div>
 
             <div class="passos">
-                <h2>Primeiros passos</h2>
+                <h2 class="titulo-padrao">Primeiros passos</h2>
 
                 <div class="lista-passos">
                     <div class="item-passo flex space-between center">
@@ -174,7 +188,546 @@
         <div class="divisor">
             <img src="web-magafilio/image/home/divisor.svg" alt="Divisor" draggable="false">
         </div>
+
+        <div class="container">
+            <div class="afiliado">
+                <h2 class="titulo-padrao">
+                    O que é um Afiliado?
+                </h2>
+                <p>
+                    O afiliado Magafilio pode ganhar dinheiro apenas divulgando produtos na internet. Toda venda
+                    realizada através dessa divulgação é atribuída ao afiliado e, após o faturamento, gera uma comissão!
+                </p>
+
+                <div class="detalhes-afiliado flex space-between wrap">
+                    <div class="afliado-item flex center divulgacao">
+                        <div class="desc-afliado">
+                            <p>
+                                O Afiliado escolhe a oferta ou material de divulgação.
+                            </p>
+                        </div>
+                        <img src="web-magafilio/image/home/icon-divulgacao.svg" alt="Oferta de divulgação">
+                    </div>
+
+                    <div class="afliado-item flex center">
+                        <div class="desc-afliado">
+                            <p>
+                                As vendas geradas pela divulgação serão exibidas na plataforma.
+                            </p>
+                        </div>
+                        <img src="web-magafilio/image/home/icon-plataforma.svg" alt="Vendas geradas">
+                    </div>
+
+                    <div class="afliado-item flex center plataforma">
+                        <div class="desc-afliado">
+                            <p>
+                                O consumidor clica na divulgação feita pelo afiliado, é direcionado para os nossos sites
+                                e finaliza a compra.
+                            </p>
+                        </div>
+                        <img src="web-magafilio/image/home/icon-site.svg" alt="Finalização da compra">
+                    </div>
+
+                    <div class="afliado-item flex center">
+                        <div class="desc-afliado">
+                            <p>
+                                O Afiliado ganhará uma comissão pela venda faturada.
+                            </p>
+                        </div>
+                        <img src="/web-magafilio/image/home/icon-faturar.svg" alt="Comissão das vendas">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cases-de-sucesso">
+                <h2 class="titulo-padrao">Cases de Sucesso</h2>
+                <p>
+                    Estas lojas escolheram a Magafilio, e possuem campanhas ativas que garantem ao afiliado sua renda
+                    extra!
+                </p>
+
+                <div class="lista-cases">
+                    <div class="case-item">
+                        <div class="conteudo-case">
+                            <figure>
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Cissa Magazine">
+                            </figure>
+                            <div class="nome-case">
+                                Cissa Magazine
+                            </div>
+                        </div>
+
+                        <div class="lucro-case flex center justify-center">
+                            <div class="porcentagem">
+                                90%
+                            </div>
+                            <p class="descricao-lucro">
+                                Receba por venda confirmada
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <div class="conteudo-case">
+                            <figure>
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/magapay.png" alt="Magapay">
+                            </figure>
+                            <div class="nome-case">
+                                Magapay
+                            </div>
+                        </div>
+
+                        <div class="lucro-case flex center justify-center">
+                            <div class="porcentagem">
+                                90%
+                            </div>
+                            <p class="descricao-lucro">
+                                Receba por venda confirmada
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <div class="conteudo-case">
+                            <figure>
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/magazord.png" alt="Magazord">
+                            </figure>
+                            <div class="nome-case">
+                                Magazord
+                            </div>
+                        </div>
+
+                        <div class="lucro-case flex center justify-center">
+                            <div class="porcentagem">
+                                90%
+                            </div>
+                            <p class="descricao-lucro">
+                                Receba por venda confirmada
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <div class="conteudo-case">
+                            <figure>
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/magazord.png" alt="Magazord">
+                            </figure>
+                            <div class="nome-case">
+                                Magazord
+                            </div>
+                        </div>
+
+                        <div class="lucro-case flex center justify-center">
+                            <div class="porcentagem">
+                                90%
+                            </div>
+                            <p class="descricao-lucro">
+                                Receba por venda confirmada
+                            </p>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <div class="conteudo-case">
+                            <figure>
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/magazord.png" alt="Magazord">
+                            </figure>
+                            <div class="nome-case">
+                                Magazord
+                            </div>
+                        </div>
+
+                        <div class="lucro-case flex center justify-center">
+                            <div class="porcentagem">
+                                90%
+                            </div>
+                            <p class="descricao-lucro">
+                                Receba por venda confirmada
+                            </p>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <div class="conteudo-case">
+                            <figure>
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/magazord.png" alt="Magazord">
+                            </figure>
+                            <div class="nome-case">
+                                Magazord
+                            </div>
+                        </div>
+
+                        <div class="lucro-case flex center justify-center">
+                            <div class="porcentagem">
+                                90%
+                            </div>
+                            <p class="descricao-lucro">
+                                Receba por venda confirmada
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ser-afiliado">
+                    <a href="" class="button button-base quero-ser-afiliado">
+                        Quero ser um Afiliado
+                    </a>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        'use strict';
+                        $('.lista-cases').owlCarousel({
+                            itemsCustom: [
+                                [0, 2],
+                                [520, 2],
+                                [700, 3],
+                                [1100, 3.5]
+                            ],
+                            navigation: true,
+                            navigationText: ['<div class="arrow prev"></div>', '<div class="arrow next"></div>']
+                        })
+                    })
+                </script>
+            </div>
+
+            <div class="por-que-magafilio">
+                <h2 class="titulo-padrao">
+                    Por que escolher a Magafilio?
+                </h2>
+
+                <div class="item-escolha">
+                    <div class="descricao-escolha">
+                        <h3>Transparência</h3>
+                        <p>
+                            Saiba quanto está vendendo e se sua divulgação está trazendo resultados.
+                            Você terá acesso a todos os pedidos e visitas que gerar, com atualizações de status em tempo
+                            real. Nossa empresa atualiza você com seus números, enquanto suas vendas aumentam e suas
+                            comissões crescem!
+                        </p>
+                    </div>
+                    <img src="web-magafilio/image/home/por-que-magafilio/transparencia.jpg" alt="Transparência">
+                </div>
+
+                <div class="item-escolha">
+                    <div class="descricao-escolha">
+                        <h3>Lojas Exclusivas</h3>
+                        <p>
+                            Lojas que dão o que falar e são campeãs em vendas, além de serem 100% seguras para
+                            divulgação. Compartilhe conteúdo de qualidade com quem precisa.
+                            Nossas lojas não estão em nenhuma outra plataforma do mercado!
+                        </p>
+                    </div>
+                    <img src="web-magafilio/image/home/por-que-magafilio/lojas-exclusivas.jpg" alt="Lojas Exclusivas">
+                </div>
+
+                <div class="item-escolha">
+                    <div class="descricao-escolha">
+                        <h3>Aceitamos Pessoa Física</h3>
+                        <p>
+                            A Magafilio remove a obrigatoriedade de possuir uma empresa, e é perfeita para ganhar um
+                            lucro extra em casa.
+                            Divulgue nossas lojas sem a necessidade de possuir um CNPJ ou emitir nota fiscal.
+                        </p>
+                    </div>
+                    <img src="web-magafilio/image/home/por-que-magafilio/pessoa-fisica.jpg"
+                        alt="Aceitamos Pessoa Física">
+                </div>
+
+                <div class="item-escolha">
+                    <div class="descricao-escolha">
+                        <h3>Ciclos de Pagamentos Mensais</h3>
+                        <p>
+                            Suas comissões estão seguras conosco, e serão distribuídas com total segurança e
+                            transparência, sem atrasos.
+                            Receba suas comissões já no próximo mês, sem enrolação!
+                        </p>
+                    </div>
+                    <img src="web-magafilio/image/home/por-que-magafilio/ciclo-pagamento.jpg"
+                        alt="Ciclos de Pagamentos Mensais">
+                </div>
+            </div>
+
+            <div class="duvidas-frequentes">
+                <h2 class="titulo-padrao">
+                    Dúvidas frequentes
+                </h2>
+                <p>
+                    Confira as principais dúvidas abaixo. Caso sua dúvida não esteja aqui, envie seu e-mail e você será
+                    respondido o mais breve possível.
+                </p>
+
+                <div id="accordion">
+                    <h3 class="even">
+                        <span class="text">Preciso ter um CNPJ para me cadastrar?</span>
+                    </h3>
+                    <div>
+                        <p>
+                            Não, possuímos campanhas liberadas também para afiliados que possuem apenas CPF e ainda não
+                            conseguem emitir nota fiscal.
+                        </p>
+                    </div>
+
+                    <h3 class="odd">
+                        <span class="text">Como funciona o pagamento das comissões? </span>
+                    </h3>
+                    <div>
+                        <p>
+                            Nosso ciclo de comissões é mensal, e tem o fechamento todo dia 10 do mês seguinte as vendas.
+                            Caso você seja pessoa jurídica, disponibilizamos 5 dias úteis após o fechamento do ciclo
+                            para envio da nota fiscal, e pagamos a comissão em conta até o último dia útil do mês. Caso
+                            você seja pessoa física, apenas pagamos diretamente as comissões em conta até o último dia
+                            útil do mês seguinte as vendas.
+                        </p>
+                    </div>
+
+                    <h3 class="even">
+                        <span class="text">Como posso acompanhar minhas vendas? </span>
+                    </h3>
+                    <div>
+                        <p>
+                            Ao se cadastrar na plataforma Magafilio você receberá um acesso ao nosso portal do afiliado.
+                            Lá você conseguirá acompanhar todas as vendas que gerar em tempo real, junto com informações
+                            de valor da venda, e status dela.
+                        </p>
+                        <p>
+                            É possível ainda acompanhar as informações de tráfego gerado em tempo real, e para qual
+                            página do site está sendo direcionado este tráfego!
+                        </p>
+                    </div>
+
+                    <h3 class="odd">
+                        <span class="text">Que tipos de campanha a Magafilio oferece? </span>
+                    </h3>
+                    <div>
+                        <p>
+                            No momento trabalhamos exclusivamente com campanhas de CPA. Nossos afiliados tem acesso a
+                            lojas exclusivas e as melhores comissões do mercado.
+                        </p>
+                    </div>
+
+                    <h3 class="even">
+                        <span class="text">Quais as formas de divulgação aceitas? </span>
+                    </h3>
+                    <div>
+                        <p>
+                            Aceitamos e buscamos afiliados de todas as verticais de divulgação disponíveis no mercado:
+                        </p>
+
+                        <ul>
+                            <li>On site</li>
+                            <li>Cupom</li>
+                            <li>Cashback</li>
+                            <li>Compra de anúncios</li>
+                            <li>E-mail marketing</li>
+                            <li>Blog</li>
+                            <li>Redes sociais</li>
+                            <li>Grupo de whatsapp</li>
+                            <li>Site de promoções</li>
+                            <li>Canal no Youtube</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="odd">
+                        <span class="text">Como a loja consegue identificar quais pedidos eu trouxe? </span>
+                    </h3>
+                    <div>
+                        <p>
+                            Quando você se cadastra em nosso programa recebe um link para divulgação das ofertas. Este
+                            link possui alguns parâmetros e é exclusivamente seu. Um desses parâmetros é a chave que
+                            identifica o seu perfil de afiliado.
+                        </p>
+                        <p>
+                            Então ao divulgar uma oferta, é muito importante que seja feito utilizando o link
+                            disponibilizado dentro da plataforma. Utilizando este link trackeado nossa plataforma
+                            consegue identificar quando você traz uma visita para o site, e quando este visitante
+                            finaliza uma compra para que possamos lhe pagar uma comissão.
+                        </p>
+                    </div>
+
+                </div>
+
+                <script>
+                    $(function () {
+                        $("#accordion").accordion({
+                            active: false,
+                            collapsible: true,
+                            multiple: true,
+                            heightStyle: "content"
+                        });
+                    });
+
+                    (function (factory) {
+                        if (typeof define === 'function' && define.amd) {
+                            define(['jquery'], factory);
+                        } else if (typeof module === 'object' && module.exports) {
+                            module.exports = function (root, jQuery) {
+                                if (jQuery === undefined) {
+                                    if (typeof window !== 'undefined') {
+                                        jQuery = require('jquery');
+                                    } else {
+                                        jQuery = require('jquery')(root);
+                                    }
+                                }
+                                factory(jQuery);
+                                return jQuery;
+                            };
+                        } else {
+                            factory(jQuery);
+                        }
+                    }(function ($) {
+
+                        var originalToggle = $.ui.accordion.prototype._toggle;
+
+                        $.extend($.ui.accordion.prototype, {
+                            multiple: false,
+                            _toggle: function (data) {
+                                if (this.options.multiple && data.newPanel.length) {
+                                    data.oldPanel = data.oldHeader = this.prevShow = $('');
+
+                                    if (this.options.collapsible && data.newPanel.is(':visible')) {
+                                        data.oldPanel = data.newPanel;
+                                        data.newPanel = $('');
+                                    }
+                                }
+                                originalToggle.apply(this, arguments);
+                            }
+                        });
+
+                    }));
+                </script>
+            </div>
+
+            <div class="area-contato">
+                <img src="web-magafilio/image/home/contato.jpg" alt="Contato" class="bg-contato" />
+                <h2 class="titulo-padrao">Entre em Contato!</h2>
+                <p>
+                    Tem interesse em tudo o que temos a oferecer para você e seu e-commerce? Você pode entrar em contato
+                    conosco através do e-mail para melhores explicações e dúvidas. Não hesite e informe-se sobre esta
+                    grande oportunidade!
+                </p>
+                <a href="" class="button button-base enviar-email">
+                    Enviar um E-mail
+                </a>
+            </div>
+
+        </div>
     </div>
+
+    <footer itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="streetAddress" content="Estrada da Madeira, 1875, bairro Barragem" />
+        <meta itemprop="postalCode" content="891650-063">
+        <meta itemprop="addressLocality" content="Rio do Sul" />
+        <meta itemprop="addressRegion" content="Santa Catarina" />
+        <meta itemprop="addressCountry" content="Brasil" />
+        <meta itemprop="telephone" content="(47) 3520-8076" />
+
+        <div class="separador">
+            <img src="web-magafilio/image/footer/topo-footer.svg" alt="Separador" />
+        </div>
+
+        <div class="footer-middle ">
+            <div class="container flex space-between">
+                <div class="endereco">
+                    <h4>
+                        Endereço
+                    </h4>
+                    <p>
+                        <span>
+                            Estrada da Madeira, 1875, Bairro Barragem
+                        </span>
+                        <span>CEP: 89165-063</span>
+                        <span>Rio do Sul - Santa Catarina</span>
+                    </p>
+                </div>
+
+                <div class="navegue-site">
+                    <h4>
+                        Navegue pelo site
+                    </h4>
+                    <ul>
+                        <li>
+                            <a href="">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="">Nossos cases</a>
+                        </li>
+                        <li>
+                            <a href="">Campanhas</a>
+                        </li>
+                        <li>
+                            <a href="">Cadastre-se</a>
+                        </li>
+                        <li>
+                            <a href="">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="horario-atendimento">
+                    <h4>
+                        Horário de Atendimento
+                    </h4>
+                    <p>
+                        Segunda à Sexta: 09:00 às 18:00hr
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="tel:+554735208076" class="flex center">
+                                <img src="web-magafilio/image/footer/icon-phone.svg" alt="Telefone" />
+                                <span class="text">
+                                    Telefone: (47) 3520-8076
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:afiliados@magamobi.com.br" class="flex center">
+                                <img src="web-magafilio/image/footer/icon-email.svg" alt="E-mail" />
+                                <span class="text">
+                                    E-mail: afiliados@magamobi.com.br
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="redes-sociais">
+                    <h4>Redes sociais</h4>
+
+                    <ul class="flex center">
+                        <li>
+                            <a href="https://www.facebook.com/Magafilio-101391891410128/" rel="nofollow" target="_blank"
+                                title="Magafilio no Facebook">
+                                <img src="web-magafilio/image/footer/icon-facebook.svg" alt="Magafilio no Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/magafilio/" rel="nofollow" target="_blank"
+                                title="Magafilio no Instagram">
+                                <img src="web-magafilio/image/footer/icon-insta.svg" alt="Magafilio no Instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container flex center space-between">
+                <a href="/" class="logo-rodape">
+                    <img src="web-magafilio/image/logo.svg" alt="Magafilio"/>
+                </a>
+                <div class="dados-loja">
+                    MAGAMOBI MARKETING DE AFILIADOS LTDA - CNPJ: 31.888.018/0001-03 - &copy; Todos os direitos reservados
+                </div>
+                <div class="empresa-grupo">
+                    <a href="http://www.magamobi.com.br/" target="_blank">
+                        <img src="web-magafilio/image/footer/logo-magamobi.svg" alt="Uma empresa do grupo Magamobi" title="Uma empresa do grupo Magamobi" draggable="false"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

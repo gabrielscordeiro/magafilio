@@ -1,1 +1,94 @@
 @import "partials/base";
+
+footer {
+    background: #fff;
+
+    .separador img {
+        width: 100%;
+    }
+
+    .footer-middle {
+        padding-bottom: 40px;
+    }
+
+    h4 {
+        font-size: em(14);
+        font-weight: bold;
+    }
+
+    .endereco {
+        p {
+            font-size: em(14);
+            line-height: 19px;
+            margin-top: 20px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .navegue-site {
+        ul {
+            margin-top: 18px;
+
+            li {
+                margin-top: 5px;
+
+                > a {
+                    font-size: em(14);
+                    color: #000;
+
+                    &:hover {
+                        color: $cor-base;
+                    }
+                }
+            }
+        }
+    }
+
+    .horario-atendimento {
+        p {
+            font-size: em(14);
+            margin-top: 20px;
+        }
+
+        li {
+            margin-top: 15px;
+
+            a {
+                font-size: em(14);
+                color: #000;
+
+                img {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    .redes-sociais {
+        ul {
+            margin-top: 20px;
+
+            li {
+                margin-right: 28px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #c5c5c5;
+        border-bottom: 1px solid #c5c5c5;
+        padding: 25px 0;
+
+        .logo-rodape {
+            width: 101px;
+        }
+
+        .dados-loja {
+            font-size: em(12);
+            color: #000;
+        }
+    }
+}

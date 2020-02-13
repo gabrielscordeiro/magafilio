@@ -1,7 +1,17 @@
 @import "partials/base";
 
 header {
+    position: fixed;
+    top: 0;
     padding: 22px 0;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+
+    &.fixed {
+        border-bottom: 1px solid $cor-bordas;
+        @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 50px 1px);
+    }
 
     .logo {
         width: 153px;
