@@ -25,7 +25,7 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: "Noto Sans", sans-serif;
-    padding-top: 83px;
+    padding-top: 97px;
 
     @include breakpoint($break-medium-big) {
         padding-top: 71px;
@@ -125,5 +125,47 @@ strong {
 
     &:hover {
         background: #ce8800;
+    }
+}
+
+.area-contato {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 26%, rgba(196, 196, 196, 0) 111.69%);
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.09);
+    text-align: center;
+    padding: 38px 0 90px 0;
+    margin: 110px 0 82px 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include breakpoint($break-medium-big) {
+        width: 96%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .bg-contato {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    h2 {
+        display: inline-block;
+    }
+
+    p {
+        margin-top: 40px;
+        padding: 0 210px;
+
+        @include breakpoint($break-medium-big) {
+            padding: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .enviar-email {
+        margin: 40px auto 0;
+        margin-top: 40px;
     }
 }

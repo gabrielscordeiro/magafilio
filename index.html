@@ -2,7 +2,7 @@
 <html lang="pt-br" xmlns:fb="https://www.facebook.com/2008/fbml">
 
 <head>
-    <title>Magafilio - Programa de Afiliados para o seu e-commerce</title>
+    <title>Magafilio - Programa de Afiliados</title>
     <link href="web-magafilio/image/favicon.png" type="image/x-icon" rel="icon" />
     <link href="web-magafilio/image/favicon.png" type="image/x-icon" rel="shortcut icon" />
 
@@ -17,7 +17,7 @@
 
     <meta name="robots" content="index, follow" />
     <meta property="og:url" content="https://www.magafilio.com.br" />
-    <meta property="og:title" content="Magafilio - Programa de Afiliados para o seu e-commerce" />
+    <meta property="og:title" content="Magafilio - Programa de Afiliados" />
     <meta property="og:site_name" content="Magafilio" />
     <meta property="og:description" content="">
 
@@ -64,25 +64,25 @@
                 itemtype="http://schema.org/SiteNavigationElement">
                 <li>
                     <meta itemprop="name" content="Sobre">
-                    <a href="" class="link-slide">
+                    <a href="sobre.html" class="link-slide">
                         Sobre
                     </a>
                 </li>
                 <li>
                     <meta itemprop="name" content="Cases e Campanhas">
-                    <a href="" class="link-slide">
+                    <a href="#campanhas" class="link-slide">
                         Cases e Campanhas
                     </a>
                 </li>
                 <li>
                     <meta itemprop="name" content="Contato">
-                    <a href="" class="link-slide">
+                    <a href="#contato" class="link-slide">
                         Contato
                     </a>
                 </li>
                 <li class="destaque">
                     <meta itemprop="name" content="Minha conta">
-                    <a href="" class="link-slide">
+                    <a>
                         Minha conta
                         <span class="arrow"></span>
                     </a>
@@ -152,6 +152,16 @@
             $(function () {
                 'use strict';
 
+                if (location.hash) {
+                    setTimeout(function () {
+                        var target = $(location.hash);
+
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 200
+                        }, 2000);
+                   }, 100);
+               }
+
                 $('header').on('click', '.menu-button', function () {
                     $('html, body').toggleClass('menu-active');
                     $(this).toggleClass('active');
@@ -172,6 +182,18 @@
 
                     $('header').append('<ul id="nav-root">' + htmlMenu + '</ul>');
                 }
+
+                $('.link-slide').on('click', function () {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 200
+                        }, 2000);
+                    }
+                    return false;
+                });
 
                 $(window).on('scroll', function () {
                     if ($(this).scrollTop() > 0) {
@@ -207,7 +229,7 @@
                             Divulgue produtos online e transforme uma atividade em um negócio lucrativo através de nossa
                             plataforma.
                         </p>
-                        <a href="" class="button button-base quero-ganhar">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScwcheanbYkW7Q1u0BipxKrjQOi22RJJLI8Gu0f5o8N2273xg/viewform" target="_blank" class="button button-base quero-ganhar">
                             Quero ganhar dinheiro
                         </a>
                     </div>
@@ -350,8 +372,8 @@
                 </div>
             </div>
 
-            <div class="cases-de-sucesso">
-                <h2 class="titulo-padrao">Cases de Sucesso</h2>
+            <div class="cases-de-sucesso" id="campanhas">
+                <h2 class="titulo-padrao">Campanhas</h2>
                 <p>
                     Estas lojas escolheram a Magafilio, e possuem campanhas ativas que garantem ao afiliado sua renda
                     extra!
@@ -361,7 +383,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.jpg"
                                     alt="Cissa Magazine">
                             </figure>
                             <div class="nome-case">
@@ -382,7 +404,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Moda Love">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/modalove.jpg" alt="Moda Love">
                             </figure>
                             <div class="nome-case">
                                 Moda Love
@@ -402,7 +424,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/somoscorujas.jpg"
                                     alt="Somos Corujas">
                             </figure>
                             <div class="nome-case">
@@ -423,7 +445,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Wevans">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/wevans.jpg" alt="Wevans">
                             </figure>
                             <div class="nome-case">
                                 Wevans
@@ -443,7 +465,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Pump Up">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/pumpup.jpg" alt="Pump Up">
                             </figure>
                             <div class="nome-case">
                                 Pump Up
@@ -463,7 +485,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/casaferrari.jpg"
                                     alt="Casa Ferrari">
                             </figure>
                             <div class="nome-case">
@@ -484,7 +506,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="La Luna">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/laluna.jpg" alt="La Luna">
                             </figure>
                             <div class="nome-case">
                                 La Luna
@@ -504,7 +526,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/mundoinfantil.jpg"
                                     alt="Mundo Infantil">
                             </figure>
                             <div class="nome-case">
@@ -525,7 +547,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/principessa.jpg"
                                     alt="Principessa">
                             </figure>
                             <div class="nome-case">
@@ -546,7 +568,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/denimzero.jpg"
                                     alt="Denim Zero">
                             </figure>
                             <div class="nome-case">
@@ -567,7 +589,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="ExtremeUV">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/extremeuv.jpg" alt="ExtremeUV">
                             </figure>
                             <div class="nome-case">
                                 ExtremeUV
@@ -587,7 +609,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/miniconceito.jpg"
                                     alt="Mini Conceito">
                             </figure>
                             <div class="nome-case">
@@ -608,7 +630,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Mind'sUp">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/mindsup.jpg" alt="Mind'sUp">
                             </figure>
                             <div class="nome-case">
                                 Mind'sUp
@@ -628,7 +650,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/lojacomamor.jpg"
                                     alt="Loja Com Amor">
                             </figure>
                             <div class="nome-case">
@@ -649,7 +671,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/casacafemel.jpg"
                                     alt="Casa Café & Mel">
                             </figure>
                             <div class="nome-case">
@@ -670,7 +692,7 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/universodolar.jpg"
                                     alt="Universo do Lar">
                             </figure>
                             <div class="nome-case">
@@ -691,7 +713,7 @@
                 </div>
 
                 <div class="ser-afiliado">
-                    <a href="" class="button button-base quero-ser-afiliado">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwcheanbYkW7Q1u0BipxKrjQOi22RJJLI8Gu0f5o8N2273xg/viewform" target="_blank" class="button button-base quero-ser-afiliado">
                         Quero ser um Afiliado
                     </a>
                 </div>
@@ -920,7 +942,7 @@
                 </script>
             </div>
 
-            <div class="area-contato">
+            <div class="area-contato" id="contato">
                 <script type="text/javascript">
                     $(function () {
                         'use strict';
@@ -935,7 +957,7 @@
                     conosco através do e-mail para melhores explicações e dúvidas. Não hesite e informe-se sobre esta
                     grande oportunidade!
                 </p>
-                <a href="" class="button button-base enviar-email">
+                <a href="mailto:afiliados@magamobi.com.br" target="_blank" class="button button-base enviar-email">
                     Enviar um E-mail
                 </a>
             </div>
@@ -976,19 +998,16 @@
                     </h4>
                     <ul>
                         <li>
-                            <a href="">Sobre</a>
+                            <a href="sobre.html">Sobre</a>
                         </li>
                         <li>
-                            <a href="">Nossos cases</a>
+                            <a href="#campanhas" class="link-slide">Campanhas</a>
                         </li>
                         <li>
-                            <a href="">Campanhas</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScwcheanbYkW7Q1u0BipxKrjQOi22RJJLI8Gu0f5o8N2273xg/viewform" target="_blank">Cadastre-se</a>
                         </li>
                         <li>
-                            <a href="">Cadastre-se</a>
-                        </li>
-                        <li>
-                            <a href="">Contato</a>
+                            <a href="#contato" class="link-slide">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -1003,7 +1022,7 @@
 
                     <ul>
                         <li>
-                            <a href="tel:+554735208076" class="flex center">
+                            <a href="tel:+554735208076" target="_blank" class="flex center">
                                 <img src="web-magafilio/image/footer/icon-phone.svg" alt="Telefone" />
                                 <span class="text">
                                     Telefone: (47) 3520-8076
@@ -1011,7 +1030,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:afiliados@magamobi.com.br" class="flex center">
+                            <a href="mailto:afiliados@magamobi.com.br" target="_blank" class="flex center">
                                 <img src="web-magafilio/image/footer/icon-email.svg" alt="E-mail" />
                                 <span class="text">
                                     E-mail: afiliados@magamobi.com.br
