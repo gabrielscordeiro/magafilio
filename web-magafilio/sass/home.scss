@@ -2,57 +2,87 @@
 //@import 'partials/jquery-ui';
 @import "partials/owl-carousel";
 
-.container-geral .topo-pagina {
-    position: relative;
-
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .conteudo-pagina {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        color: #fff;
-    }
-
-    .conteudo-topo {
-        width: 570px;
-        margin: 197px 0 0 169px;
-    }
-
-    h2 {
-        font-size: em(48);
-        font-weight: bold;
-        font-family: "Noto Serif", serif;
-        line-height: 59px;
-    }
-
-    p {
-        font-size: em(13);
-        margin-top: 15px;
-        padding-right: 110px;
-        line-height: 18px;
-        color: #fff;
-    }
-
-    a.quero-ganhar {
-        margin-top: 20px;
-    }
-}
-
 .container-geral {
     p {
         font-size: em(13);
         line-height: 18px;
         color: #000;
     }
+    .topo-pagina {
+        position: relative;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .conteudo-pagina {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+
+            @include breakpoint($break-medium-big) {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .conteudo-topo {
+            width: 570px;
+            margin: 197px 0 0 169px;
+
+            @include breakpoint($break-medium-big) {
+                width: auto;
+                margin: 0;
+                padding: 0 20px;
+            }
+        }
+
+        h2 {
+            font-size: em(48);
+            font-weight: bold;
+            font-family: "Noto Serif", serif;
+            line-height: 59px;
+
+            @include breakpoint($break-medium-big) {
+                font-size: em(25);
+                line-height: initial;
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: em(13);
+            margin-top: 15px;
+            padding-right: 110px;
+            line-height: 18px;
+            color: #fff;
+
+            @include breakpoint($break-medium-big) {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        a.quero-ganhar {
+            margin-top: 20px;
+
+            @include breakpoint($break-medium-big) {
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 .beneficios {
     margin-top: 70px;
+
+    @include breakpoint($break-medium-big) {
+        margin-top: 20px;
+    }
 
     img {
         margin: 0 auto;
@@ -62,8 +92,17 @@
 .lista-beneficios {
     margin-top: 70px;
 
+    @include breakpoint($break-medium-big) {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
     .item-beneficios {
         text-align: center;
+
+        @include breakpoint($break-medium-big) {
+            margin: 20px auto;
+        }
     }
 
     h3 {
@@ -72,6 +111,10 @@
         line-height: 33px;
         color: $cor-texto;
         margin-top: 12px;
+
+        @include breakpoint($break-medium-big) {
+            font-size: em(18);
+        }
     }
 
     p {
@@ -86,10 +129,18 @@ h2.titulo-padrao {
     color: $cor-base;
     font-weight: bold;
     text-align: center;
+
+    @include breakpoint($break-medium-big) {
+        font-size: em(25);
+    }
 }
 
 .passos {
     margin-top: 110px;
+
+    @include breakpoint($break-medium-big) {
+        margin-top: 50px;
+    }
 
     .item-passo {
         max-width: 710px;
@@ -97,6 +148,12 @@ h2.titulo-padrao {
         border: 1px solid #a4b0c0;
         padding: 25px 70px;
         margin: 30px auto 15px;
+
+        @include breakpoint($break-medium-big) {
+            width: 96%;
+            padding: 20px;
+            margin: 15px auto;
+        }
 
         .conteudo-passo {
             padding-left: 30px;
@@ -107,6 +164,10 @@ h2.titulo-padrao {
             line-height: 33px;
             color: $cor-texto;
             font-weight: bold;
+
+            @include breakpoint($break-medium-big) {
+                font-size: em(18);
+            }
         }
         p {
             margin-top: 5px;
@@ -126,6 +187,11 @@ h2.titulo-padrao {
     margin-top: 130px;
     padding: 0 80px;
 
+    @include breakpoint($break-medium-big) {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
     .detalhes-afiliado {
         margin-top: 40px;
     }
@@ -139,6 +205,11 @@ h2.titulo-padrao {
         justify-content: flex-end;
         width: 420px;
         margin-bottom: 45px;
+
+        @include breakpoint($break-medium-big) {
+            flex-direction: row-reverse;
+            width: auto;
+        }
 
         &:nth-child(2n) {
             flex-direction: row-reverse;
@@ -163,8 +234,16 @@ h2.titulo-padrao {
         .desc-afliado {
             margin-right: 30px;
 
+            @include breakpoint($break-medium-big) {
+                margin: 0 0 0 30px;
+            }
+
             p {
                 text-align: right;
+
+                @include breakpoint($break-medium-big) {
+                    text-align: left;
+                }
             }
         }
     }
@@ -173,6 +252,11 @@ h2.titulo-padrao {
 .cases-de-sucesso {
     margin-top: 84px;
     text-align: center;
+
+    @include breakpoint($break-medium-big) {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
 
     p {
         margin-top: 8px;
@@ -230,6 +314,10 @@ h2.titulo-padrao {
             height: 145px;
             overflow: hidden;
 
+            @include breakpoint($break-medium-big) {
+                height: auto;
+            }
+
             img {
                 border-radius: 10px 10px 0 0;
             }
@@ -266,12 +354,21 @@ h2.titulo-padrao {
     a.quero-ser-afiliado {
         margin: 0 auto;
         margin-top: 80px;
+
+        @include breakpoint($break-medium-big) {
+            margin-top: 40px;
+        }
     }
 }
 
 .por-que-magafilio {
     @include container(990px);
     margin-top: 130px;
+
+    @include breakpoint($break-medium-big) {
+        margin-top: 50px;
+        padding: 0 10px;
+    }
 
     .item-escolha {
         display: flex;
@@ -281,6 +378,12 @@ h2.titulo-padrao {
         margin-bottom: 80px;
         text-align: right;
 
+        @include breakpoint($break-medium-big) {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         &:first-of-type {
             margin-top: 35px;
         }
@@ -289,9 +392,18 @@ h2.titulo-padrao {
             flex-direction: row;
             text-align: left;
 
+            @include breakpoint($break-medium-big) {
+                flex-direction: column;
+                text-align: center;
+            }
+
             p {
                 padding-left: 0;
                 padding-right: 120px;
+
+                @include breakpoint($break-medium-big) {
+                    padding: 0;
+                }
             }
         }
 
@@ -305,6 +417,11 @@ h2.titulo-padrao {
         p {
             margin-top: 15px;
             padding-left: 120px;
+
+            @include breakpoint($break-medium-big) {
+                padding: 0;
+                margin-bottom: 15px;
+            }
         }
     }
 }
@@ -336,6 +453,11 @@ h2.titulo-padrao {
             outline: 0 none;
             font-weight: bold;
 
+            @include breakpoint($break-medium-big) {
+                font-size: em(16);
+                padding: 20px;
+            }
+
             &:before,
             &:after {
                 content: "";
@@ -344,6 +466,10 @@ h2.titulo-padrao {
                 height: 101%;
                 background: #f3f3f3;
                 border-bottom: 1px solid #e1e1e1;
+
+                @include breakpoint($break-medium-big) {
+                    display: none;
+                }
             }
 
             &:before {
@@ -433,6 +559,12 @@ h2.titulo-padrao {
     border-radius: 10px;
     overflow: hidden;
 
+    @include breakpoint($break-medium-big) {
+        width: 96%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
     .bg-contato {
         position: absolute;
         bottom: 0;
@@ -442,9 +574,15 @@ h2.titulo-padrao {
     h2 {
         display: inline-block;
     }
+
     p {
         margin-top: 40px;
         padding: 0 210px;
+
+        @include breakpoint($break-medium-big) {
+            padding: 0;
+            margin-top: 20px;
+        }
     }
 
     .enviar-email {

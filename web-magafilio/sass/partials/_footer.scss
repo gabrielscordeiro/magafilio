@@ -9,6 +9,13 @@ footer {
 
     .footer-middle {
         padding-bottom: 40px;
+
+        .container {
+            @include breakpoint($break-medium-big) {
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
     }
 
     h4 {
@@ -22,6 +29,10 @@ footer {
             line-height: 19px;
             margin-top: 20px;
 
+            @include breakpoint($break-medium-big) {
+                margin-top: 10px;
+            }
+
             span {
                 display: block;
             }
@@ -29,11 +40,23 @@ footer {
     }
 
     .navegue-site {
+        @include breakpoint($break-medium-big) {
+            margin-top: 20px;
+        }
+
         ul {
             margin-top: 18px;
 
+            @include breakpoint($break-medium-big) {
+                margin-top: 10px;
+            }
+
             li {
                 margin-top: 5px;
+
+                @include breakpoint($break-medium-big) {
+                    margin-top: 0px;
+                }
 
                 > a {
                     font-size: em(14);
@@ -48,13 +71,25 @@ footer {
     }
 
     .horario-atendimento {
+        @include breakpoint($break-medium-big) {
+            margin-top: 20px;
+        }
+
         p {
             font-size: em(14);
             margin-top: 20px;
+
+            @include breakpoint($break-medium-big) {
+                margin-top: 10px;
+            }
         }
 
         li {
             margin-top: 15px;
+
+            @include breakpoint($break-medium-big) {
+                margin-top: 5px;
+            }
 
             a {
                 font-size: em(14);
@@ -68,11 +103,22 @@ footer {
     }
 
     .redes-sociais {
+        @include breakpoint($break-medium-big) {
+            margin-top: 20px;
+        }
+
         ul {
             margin-top: 20px;
+            @include breakpoint($break-medium-big) {
+                margin-top: 10px;
+            }
 
             li {
                 margin-right: 28px;
+
+                @include breakpoint($break-medium-big) {
+                    margin-right: 15px;
+                }
             }
         }
     }
@@ -82,13 +128,27 @@ footer {
         border-bottom: 1px solid #c5c5c5;
         padding: 25px 0;
 
+        .container {
+            @include breakpoint($break-medium-big) {
+                flex-direction: column;
+            }
+        }
+
         .logo-rodape {
             width: 101px;
+            @include breakpoint($break-medium-big) {
+                width: auto;
+            }
         }
 
         .dados-loja {
             font-size: em(12);
             color: #000;
+
+            @include breakpoint($break-medium-big) {
+                text-align: center;
+                padding: 10px;
+            }
         }
     }
 }

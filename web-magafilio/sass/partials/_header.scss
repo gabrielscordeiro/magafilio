@@ -1,5 +1,7 @@
 @import "partials/base";
 
+$width-menu-mobile: 270px;
+
 header {
     position: fixed;
     top: 0;
@@ -8,39 +10,172 @@ header {
     width: 100%;
     z-index: 1;
 
+    @include breakpoint($break-medium-big) {
+        padding: 15px 0;
+        border-bottom: 1px solid $cor-bordas;
+        @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 50px 1px);
+    }
+
     &.fixed {
         border-bottom: 1px solid $cor-bordas;
         @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 50px 1px);
     }
 
-    .logo {
-        width: 153px;
+    .flex.space-between {
+        @include breakpoint($break-medium-big) {
+            justify-content: center;
+        }
+    }
+}
+
+.logo {
+    width: 153px;
+
+    @include breakpoint($break-medium-big) {
+        width: auto;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+ul#nav-root {
+    @include breakpoint($break-medium-big) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: $width-menu-mobile;
+        height: 100%;
+        z-index: 99998;
+        @include transform(translateX(-100%));
+        @include transition(all 0.5s ease);
+        background: $cor-base;
+    }
+
+    > li {
+        padding: 0 25px;
+
+        @include breakpoint($break-medium-big) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 45px;
+            border-bottom: 1px solid $cor-base-darken;
+            padding: 0;
+        }
+
+        &:hover > a {
+            color: $cor-base;
+
+            @include breakpoint($break-medium-big) {
+                color: #fff;
+            }
+        }
+
+        &.destaque > a {
+            padding: 15px 22px;
+            border: 1px solid $cor-base;
+            border-radius: 10px;
+            font-weight: bold;
+
+            @include breakpoint($break-medium-big) {
+                padding: 0 0 0 10px;
+                border: 0;
+            }
+
+            &:hover {
+                background: $cor-base;
+                color: #fff;
+            }
+        }
+
+        > a {
+            font-size: em(14);
+            color: #000;
+            @include transition(color 0.2s);
+
+            @include breakpoint($break-medium-big) {
+                width: 100%;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.menu-button {
+    display: none;
+    position: absolute;
+    top: 22px;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 20px;
+    background: #fff;
+    @include transition(all 0.5s ease);
+
+    @include breakpoint($break-medium-big) {
+        display: flex;
+    }
+
+    &.active {
+        position: fixed;
+    }
+
+    .icon-menu,
+    .icon-menu:before,
+    .icon-menu:after {
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: $cor-base;
+        @include transition(transform 0.5s ease);
+    }
+
+    .icon-menu:before {
+        content: "";
+        top: 7px;
+    }
+
+    .icon-menu:after {
+        content: "";
+        top: -7px;
+    }
+}
+
+.menu-active {
+    .menu-mobile-overlay {
+        visibility: visible;
     }
 
     ul#nav-root {
-        > li {
-            padding: 0 25px;
+        @include transform(translateX(0));
+        @include box-shadow(0 0 15px 5px rgba(0, 0, 0, 0.75));
+    }
 
-            &:hover > a {
-                color: $cor-base;
+    .menu-button {
+        @include transform(translateX($width-menu-mobile));
+        top: 14px;
+        left: 0;
+        height: 44px;
+        z-index: 99998;
+
+        .icon-menu {
+            background: 0 !important;
+
+            &:before {
+                transform: rotate(-45deg);
+                top: 0;
             }
 
-            &.destaque > a {
-                padding: 15px 22px;
-                border: 1px solid $cor-base;
-                border-radius: 10px;
-                font-weight: bold;
-
-                &:hover {
-                    background: $cor-base;
-                    color: #fff;
-                }
-            }
-
-            > a {
-                font-size: em(14);
-                color: #000;
-                @include transition(color 0.2s);
+            &:after {
+                transform: rotate(45deg);
+                top: 0;
             }
         }
     }
