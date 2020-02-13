@@ -74,20 +74,143 @@ ul#nav-root {
             }
         }
 
-        &.destaque > a {
-            padding: 15px 22px;
-            border: 1px solid $cor-base;
-            border-radius: 10px;
-            font-weight: bold;
-
-            @include breakpoint($break-medium-big) {
-                padding: 0 0 0 10px;
-                border: 0;
-            }
+        &.destaque {
+            position: relative;
 
             &:hover {
-                background: $cor-base;
-                color: #fff;
+                > a {
+                    background: $cor-base;
+                    color: #fff;
+
+                    .arrow {
+                        @include seta(8px, #fff, "top");
+
+                        @include breakpoint($break-medium-big) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .hover-login {
+                    @include breakpoint(min-width 1240px) {
+                        display: block;
+                    }
+                }
+            }
+
+            > a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 22px;
+                border: 1px solid $cor-base;
+                border-radius: 10px;
+                font-weight: bold;
+
+                @include breakpoint($break-medium-big) {
+                    justify-content: flex-start;
+                    padding: 0 0 0 10px;
+                    border: 0;
+                }
+
+                .arrow {
+                    display: block;
+                    @include seta(8px, #000, "bottom");
+                    margin-left: 5px;
+
+                    @include breakpoint($break-medium-big) {
+                        display: none;
+                    }
+                }
+            }
+
+            .hover-login {
+                position: absolute;
+                right: 0;
+                display: none;
+                padding-top: 30px;
+
+                @include breakpoint($break-medium-big) {
+                    top: 15px;
+                    left: 0;
+                }
+
+                .area-login {
+                    padding: 30px;
+                    background: #fff;
+                    border-radius: 10px;
+                    @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 50px 1px);
+
+                    @include breakpoint($break-medium-big) {
+                        padding: 10px;
+                        border-radius: 0;
+                        @include box-shadow(none);
+                    }
+                }
+
+                .titulo-login {
+                    font-weight: bold;
+                    font-size: em(18);
+                    text-align: center;
+                    color: $cor-texto;
+                    text-align: left;
+                }
+
+                p.descricao-login {
+                    font-size: em(13);
+                    text-align: left;
+                }
+
+                .tipo-login {
+                    width: 187px;
+                    height: 40px;
+                    cursor: pointer;
+                    font-size: em(14);
+                    font-weight: bold;
+                    margin-top: 20px;
+                    opacity: 0.3;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.selected {
+                        opacity: 1;
+                    }
+
+                    &.tipo-afiliado {
+                        background: #00cba9;
+                        border-radius: 5px 0px 0px 5px;
+                    }
+
+                    &.tipo-anunciante {
+                        background: #0099ff;
+                        border-radius: 0px 5px 5px 0px;
+                    }
+
+                    .text {
+                        margin-left: 10px;
+                    }
+                }
+
+                a.btn-login {
+                    display: block;
+                    width: 110px;
+                    height: 35px;
+                    border-radius: 5px;
+                    border: 1px solid #0099ff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #000;
+                    text-align: center;
+                    line-height: 32px;
+                    margin-top: 20px;
+
+                    &:hover {
+                        background: #0099ff;
+                        color: #fff;
+                    }
+                }
             }
         }
 

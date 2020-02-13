@@ -84,7 +84,66 @@
                     <meta itemprop="name" content="Minha conta">
                     <a href="" class="link-slide">
                         Minha conta
+                        <span class="arrow"></span>
                     </a>
+
+                    <div class="hover-login">
+                        <div class="area-login">
+                            <div class="titulo-login">
+                                Eu sou...
+                            </div>
+                            <p class="descricao-login">
+                                Selecione seu tipo de conta e desfrute de nossos benefícios.
+                            </p>
+                            <div class="lista-login flex justify-center">
+                                <div class="tipo-login tipo-afiliado flex center justify-center selected"
+                                    data-tipo-login="afiliado">
+                                    <img src="web-magafilio/image/header/icon-afiliado.svg" alt="Afiliado">
+                                    <span class="text">
+                                        Afiliado
+                                    </span>
+                                </div>
+
+                                <div class="tipo-login tipo-anunciante flex center justify-center"
+                                    data-tipo-login="anunciante">
+                                    <img src="web-magafilio/image/header/icon-anunciante.svg" alt="Anunciante">
+                                    <span class="text">
+                                        Anunciante
+                                    </span>
+                                </div>
+                            </div>
+
+                            <a href="https://magafilio.com.br/afiliado/login" target="_blank" class="btn-login">Entrar</a>
+
+                            <script type="text/javascript">
+                                $(function () {
+                                    'use strict';
+
+                                    var anunciante = 'https://magafilio.com.br/anunciante/login';
+                                    var afiliado = 'https://magafilio.com.br/afiliado/login';
+
+                                    $('.tipo-login').on('click', function () {
+                                        $('.tipo-login').removeClass('selected');
+                                        $(this).addClass('selected');
+
+                                        var tipoLogin = $(this).data('tipo-login');
+                                        if (tipoLogin == 'afiliado') {
+                                            $('a.btn-login').attr('href', afiliado)
+                                        } else {
+                                            $('a.btn-login').attr('href', anunciante)
+                                        }
+                                    });
+
+                                    if(window.isMobile){
+                                        $('.destaque').on('click', function(){
+                                            $('.hover-login').show();
+                                            return false;
+                                        })
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -343,7 +402,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Somos Corujas">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Somos Corujas">
                             </figure>
                             <div class="nome-case">
                                 Somos Corujas
@@ -403,7 +463,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Casa Ferrari">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Casa Ferrari">
                             </figure>
                             <div class="nome-case">
                                 Casa Ferrari
@@ -443,7 +504,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Mundo Infantil">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Mundo Infantil">
                             </figure>
                             <div class="nome-case">
                                 Mundo Infantil
@@ -463,7 +525,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Principessa">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Principessa">
                             </figure>
                             <div class="nome-case">
                                 Principessa
@@ -483,7 +546,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Denim Zero">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Denim Zero">
                             </figure>
                             <div class="nome-case">
                                 Denim Zero
@@ -523,7 +587,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Mini Conceito">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Mini Conceito">
                             </figure>
                             <div class="nome-case">
                                 Mini Conceito
@@ -563,7 +628,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Loja Com Amor">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Loja Com Amor">
                             </figure>
                             <div class="nome-case">
                                 Loja Com Amor
@@ -583,7 +649,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Casa Café & Mel">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Casa Café & Mel">
                             </figure>
                             <div class="nome-case">
                                 Casa Café & Mel
@@ -603,7 +670,8 @@
                     <div class="case-item">
                         <div class="conteudo-case">
                             <figure>
-                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png" alt="Universo do Lar">
+                                <img src="/web-magafilio/image/home/cases-de-sucesso/cissamagazine.png"
+                                    alt="Universo do Lar">
                             </figure>
                             <div class="nome-case">
                                 Universo do Lar
