@@ -106,6 +106,7 @@ ul#nav-root {
                 border: 1px solid $cor-base;
                 border-radius: 10px;
                 font-weight: bold;
+                cursor: pointer;
 
                 @include breakpoint($break-medium-big) {
                     justify-content: flex-start;
