@@ -10,6 +10,10 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/gabrielscordeiro/magafilio">
   
+   <a href="https://www.linkedin.com/in/gabriel-schmidt-cordeiro-199262103/">
+    <img alt="Made by Gabriel Schmidt Cordeiro" src="https://img.shields.io/badge/made%20by-Gabriel Schmidt Cordeiro-%2304D361">
+  </a>
+  
   <a href="https://github.com/gabrielscordeiro/magafilio/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gabrielscordeiro/magafilio">
   </a>
