@@ -123,18 +123,6 @@
     }
 }
 
-h2.titulo-padrao {
-    font-size: em(36);
-    line-height: 49px;
-    color: $cor-base;
-    font-weight: bold;
-    text-align: center;
-
-    @include breakpoint($break-medium-big) {
-        font-size: em(25);
-    }
-}
-
 .passos {
     margin-top: 110px;
 

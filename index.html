@@ -176,7 +176,7 @@
                     $('.menu-button').trigger('click');
                 });
 
-                if (window.outerWidth <= 1024) {
+                if (window.isMobile) {
                     var htmlMenu = $('ul#nav-root').html();
                     $('ul#nav-root').remove();
 

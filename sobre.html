@@ -29,7 +29,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="web-magafilio/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="web-magafilio/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="web-magafilio/css/sobre.css" />
 
     <script type="text/javascript" src="web-magafilio/js/jquery-3.4.0.min.js"></script>
     <script type="text/javascript" src="web-magafilio/js/magafilio.js"></script>
@@ -167,7 +167,7 @@
                     $('.menu-button').trigger('click');
                 });
 
-                if (window.outerWidth <= 1024) {
+                if (window.isMobile) {
                     var htmlMenu = $('ul#nav-root').html();
                     $('ul#nav-root').remove();
 
@@ -198,6 +198,84 @@
     </header>
 
     <div class="container-geral">
+        <div class="topo-pagina">
+            <img src="web-magafilio/image/sobre/background-topo.jpg" alt="Sobre" />
+            <div class="conteudo-pagina">
+                <div class="container">
+                    <div class="conteudo-topo">
+                        <h1>Sobre</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-pagina">
+            <script type="text/javascript">
+                $(function () {
+                    'use strict';
+                    if (!window.isMobile) {
+                        $('.container-pagina').prepend('<img src="web-magafilio/image/home/icon-users.svg" alt="Users" class="icon-users">')
+                    }
+                });
+            </script>
+
+            <div class="missao-visao-valores flex center space-between">
+                <div class="item-mvv">
+                    <img src="web-magafilio/image/sobre/icon-missao.svg" alt="Missão">
+                    <h2>Missão</h2>
+                    <p>Receba uma grande quantidade de comissão baseado em suas vendas.</p>
+                </div>
+
+                <div class="item-mvv">
+                    <img src="web-magafilio/image/sobre/icon-visao.svg" alt="Visão">
+                    <h2>Visão</h2>
+                    <p>Receba uma grande quantidade de comissão baseado em suas vendas.</p>
+                </div>
+
+                <div class="item-mvv">
+                    <img src="web-magafilio/image/sobre/icon-valores.svg" alt="Valores">
+                    <h2>Valores</h2>
+                    <p>Receba uma grande quantidade de comissão baseado em suas vendas.</p>
+                </div>
+            </div>
+
+            <div class="descricao-sobre">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis alias culpa et? Quas similique
+                    esse sit debitis voluptatum quasi dolorem nihil! Enim, labore ullam! Deserunt ut quisquam maxime
+                    autem minus! Quisquam fugit fugiat corrupti numquam dignissimos! Qui at obcaecati pariatur quisquam
+                    nisi sapiente
+                    officiis ipsa rem alias voluptate dolorum sequi, deleniti inventore hic adipisci totam perferendis
+                    minus aliquam nemo tenetur.
+                </p>
+                <p>
+                    Iure sint veniam corporis est eveniet, sapiente dicta quibusdam animi repellendus quos ex repellat
+                    enim, debitis totam nisi reprehenderit nulla. Voluptates officiis natus veniam amet optio laborum,
+                    totam quas necessitatibus. Necessitatibus, esse error laboriosam nihil, sapiente et expedita
+                    perspiciatis maiores optio voluptas
+                    adipisci veniam labore omnis nesciunt, facere fugiat provident cupiditate commodi incidunt cumque!
+                    Architecto corporis molestias animi exercitationem eligendi? Quisquam fugit fugiat corrupti numquam
+                    dignissimos! Qui at obcaecati pariatur quisquam nisi sapiente
+                    officiis ipsa rem alias voluptate dolorum sequi, deleniti inventore hic adipisci totam perferendis
+                    minus aliquam nemo tenetur.
+                </p>
+                <p>
+                    Necessitatibus, esse error laboriosam nihil, sapiente et expedita perspiciatis maiores optio
+                    voluptas
+                    adipisci veniam labore omnis nesciunt, facere fugiat provident cupiditate commodi incidunt cumque!
+                    Architecto corporis molestias animi exercitationem eligendi? Quisquam fugit fugiat corrupti numquam
+                    dignissimos! Qui at obcaecati pariatur quisquam nisi sapiente
+                    officiis ipsa rem alias voluptate dolorum sequi, deleniti inventore hic adipisci totam perferendis
+                    minus aliquam nemo tenetur.
+                </p>
+                <p>
+                    Quisquam fugit fugiat corrupti numquam dignissimos! Qui at obcaecati pariatur quisquam nisi sapiente
+                    officiis ipsa rem alias voluptate dolorum sequi, deleniti inventore hic adipisci totam perferendis
+                    minus aliquam nemo tenetur.
+                </p>
+            </div>
+        </div>
+
         <div class="container">
             <div class="area-contato" id="contato">
                 <script type="text/javascript">
