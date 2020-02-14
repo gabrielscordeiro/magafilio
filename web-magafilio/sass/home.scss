@@ -325,10 +325,17 @@
         }
 
         .lucro-case {
+            @include breakpoint($break-medium-big) {
+                margin-top: 5px;
+            }
             .porcentagem {
                 font-weight: bold;
                 font-size: em(36);
                 color: #0099ff;
+
+                @include breakpoint($break-medium-big) {
+                    font-size: em(23);
+                }
             }
 
             .descricao-lucro {
@@ -401,6 +408,10 @@
             font-size: em(24);
             line-height: 33px;
             color: $cor-texto;
+
+            @include breakpoint($break-medium-big) {
+                font-size: em(20);
+            }
         }
 
         p {

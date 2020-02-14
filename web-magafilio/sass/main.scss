@@ -136,7 +136,7 @@ h2.titulo-padrao {
     text-align: center;
 
     @include breakpoint($break-medium-big) {
-        font-size: em(25);
+        font-size: em(24);
     }
 }
 
