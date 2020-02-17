@@ -452,6 +452,7 @@
             color: $cor-texto;
             outline: 0 none;
             font-weight: bold;
+            cursor: pointer;
 
             @include breakpoint($break-medium-big) {
                 font-size: em(16);
